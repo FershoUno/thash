@@ -15,6 +15,6 @@ SHA256 : `echo $text| sha256sum | cut -d " " -f 1`
          `echo $text| sha256sum | cut -d " " -f 1| rev`
 SHA384 : `echo $text | sha384sum | cut -d " " -f 1`
          `echo $text | sha384sum | cut -d " " -f 1| rev`
-sha512 : `echo $text | sha512sum | cut -d " " -f 1`
+SHA512 : `echo $text | sha512sum | cut -d " " -f 1`
          `echo $text | sha512sum | cut -d " " -f 1| rev`
 "
