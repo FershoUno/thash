@@ -1,0 +1,20 @@
+#!/bin/bash
+# @FershoUno
+echo -n "	THASH v.1.0
+	CODED: @FershoUno
+Ingrese tu texto: "
+read text
+echo "
+MD5    : `echo $text| md5sum | cut -d " " -f 1`
+         `echo $text| md5sum | cut -d " " -f 1| rev`
+SHA1   : `echo $text| sha1sum | cut -d " " -f 1`
+         `echo $text| sha1sum | cut -d " " -f 1| rev`
+SHA224 : `echo $text| sha224sum | cut -d " " -f 1`
+         `echo $text| sha224sum | cut -d " " -f 1| rev`
+SHA256 : `echo $text| sha256sum | cut -d " " -f 1`
+         `echo $text| sha256sum | cut -d " " -f 1| rev`
+SHA384 : `echo $text | sha384sum | cut -d " " -f 1`
+         `echo $text | sha384sum | cut -d " " -f 1| rev`
+sha512 : `echo $text | sha512sum | cut -d " " -f 1`
+         `echo $text | sha512sum | cut -d " " -f 1| rev`
+"
