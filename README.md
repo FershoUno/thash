@@ -26,3 +26,7 @@ Soporta 6 tipos de hash.
 * SHA256
 * SHA384
 * SHA512
+
+# ScreenShot
+
+![](https://raw.githubusercontent.com/FershoUno/screenshots/main/thash-screenshots/thash-example.png)
