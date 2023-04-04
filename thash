@@ -1,20 +1,16 @@
 #!/bin/bash
 # @FershoUno
+
 echo -n "	THASH v.1.0
 	CODED: @FershoUno
 Ingrese tu texto: "
 read text
+
+ListHash=(md5sum sha1sum sha224sum sha256sum sha384sum sha512sum)
+
+for i in "${ListHash[@]}"
+do
 echo "
-MD5    : `echo $text| md5sum | cut -d " " -f 1`
-         `echo $text| md5sum | cut -d " " -f 1| rev`
-SHA1   : `echo $text| sha1sum | cut -d " " -f 1`
-         `echo $text| sha1sum | cut -d " " -f 1| rev`
-SHA224 : `echo $text| sha224sum | cut -d " " -f 1`
-         `echo $text| sha224sum | cut -d " " -f 1| rev`
-SHA256 : `echo $text| sha256sum | cut -d " " -f 1`
-         `echo $text| sha256sum | cut -d " " -f 1| rev`
-SHA384 : `echo $text | sha384sum | cut -d " " -f 1`
-         `echo $text | sha384sum | cut -d " " -f 1| rev`
-SHA512 : `echo $text | sha512sum | cut -d " " -f 1`
-         `echo $text | sha512sum | cut -d " " -f 1| rev`
-"
+$i      : `echo $text| $i | cut -d " " -f 1`
+$i"inv"   : `echo $text| $i | cut -d " " -f 1| rev`"
+done
