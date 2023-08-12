@@ -1,13 +1,10 @@
 #!/bin/bash
 # @FershoUno
-
 echo -n "	THASH v.2.0
 	CODED: @FershoUno
 Ingrese tu texto: "
 read text
-
 ListHash=(md5sum sha1sum sha224sum sha256sum sha384sum sha512sum)
-
 for i in "${ListHash[@]}"
 do
 echo "
